@@ -1,0 +1,92 @@
+# For security reasons, Option followsymlinks cannot be overridden.
+Options +FollowSymLinks
+Options +SymLinksIfOwnerMatch
+RewriteEngine on
+#rewritebase /
+
+RewriteCond %{SERVER_PORT} !=443
+RewriteRule ^ https://www.sungate24.com%{REQUEST_URI} [NS,R,L]
+
+
+RewriteRule ^faq$ sss.php [L]
+RewriteRule ^contact$ iletisim.php [L]
+RewriteRule ^text/([a-zA-Z0-9_-]+)/([0-9_-]+)$ yazi-detay.php?link=$1&id=$2
+
+RewriteRule ^tur/([a-zA-Z0-9_-]+)/([0-9_-]+)$ tur-detay.php?link=$1&id=$2
+RewriteRule ^tours$ turlar.php [L]
+RewriteRule ^tours/([a-zA-Z0-9_-]+)/([0-9_-]+)$ tur-kat-detay.php?link=$1&id=$2
+RewriteRule ^tours/([a-zA-Z0-9_-]+)/([0-9_-]+)/sayfa/([0-9_-]+)$ tur-kat-detay.php?link=$1&id=$2&sayfa=$3
+
+RewriteRule ^otel/([a-zA-Z0-9_-]+)/([0-9_-]+)$ otel-detay.php?link=$1&id=$2
+RewriteRule ^hotels$ oteller.php [L]
+RewriteRule ^hotels/([0-9_-]+)$ oteller.php?sayfa=$1
+RewriteRule ^hotels/([a-zA-Z0-9_-]+)/([0-9_-]+)$ otel-kat-detay.php?link=$1&id=$2
+RewriteRule ^hotels/([a-zA-Z0-9_-]+)/([0-9_-]+)/([0-9_-]+)$ otel-kat-detay.php?link=$1&id=$2&sayfa=$3
+
+RewriteRule ^reservierungDetail$ rezervasyonDetail.php [L]
+RewriteRule ^resretail/([a-zA-Z0-9_-]+)$ rezervasyon-detay.php?siparisno=$1
+RewriteRule ^reservierung$ sepet.php [L]
+RewriteRule ^reservierung/2/([a-zA-Z0-9_-]+)$ sepet2.php?rezno=$1
+RewriteRule ^reservierung/3/([a-zA-Z0-9_-]+)$ sepet3.php?rezno=$1
+
+
+RewriteRule ^reservierungOne$ app/req/ajax.php?do=rezervasyon&q=one
+RewriteRule ^reservierungTwo$ app/req/ajax.php?do=rezervasyon&q=two
+RewriteRule ^reservierungEnd$ app/req/ajax.php?do=rezervasyon&q=end
+
+RewriteRule ^userHotelComment$ app/req/ajax.php?do=hotel_comment&q=user_add
+
+
+RewriteRule ^oreservierungOne$ app/req/ajax.php?do=otel-rezervasyon&q=one
+RewriteRule ^oreservierungTwo$ app/req/ajax.php?do=otel-rezervasyon&q=two
+RewriteRule ^oreservierungEnd$ app/req/ajax.php?do=otel-rezervasyon&q=end
+RewriteRule ^siparisDetayGetir$ req/siparis.php
+RewriteRule ^login$ login.php [L]
+RewriteRule ^register$ register.php [L]
+RewriteRule ^account$ hesabim.php [L]
+RewriteRule ^blog$ blog.php [L]
+RewriteRule ^blog/([0-9_-]+)$ blog.php?sayfa=$1
+RewriteRule ^blog/kategori/([a-zA-Z0-9_-]+)/([0-9_-]+)$ blog.php?link=$1&id=$2
+RewriteRule ^blog/kategori/([a-zA-Z0-9_-]+)/([0-9_-]+)/([0-9_-]+)$ blog.php?link=$1&id=$2&sayfa=$3
+
+RewriteRule ^arama-sonuc$ arama.php [L]
+RewriteRule ^act/(.*)/(.*)$ login.php?q=aktivasyon&email=$1&kod=$2
+RewriteRule ^userLogin$ app/req/ajax.php?do=user&q=login
+RewriteRule ^userRegister$ app/req/ajax.php?do=user&q=register
+RewriteRule ^userEdit$ app/req/ajax.php?do=user&q=edit
+RewriteRule ^page/([a-zA-Z0-9_-]+)$ sayfa.php?link=$1
+RewriteRule ^sayfa/([a-zA-Z0-9_-]+)/([0-9_-]+)$ sayfa.php?link=$1&id=$2
+RewriteRule ^hizmet/([a-zA-Z0-9_-]+)/([0-9_-]+)$ hizmet.php?link=$1&id=$2
+RewriteRule ^haber/([a-zA-Z0-9_-]+)/([0-9_-]+)$ haber.php?link=$1&id=$2
+RewriteRule ^yazi/([a-zA-Z0-9_-]+)/([0-9_-]+)$ yazi.php?link=$1&id=$2
+RewriteRule ^urun/([a-zA-Z0-9_-]+)/([0-9_-]+)$ urun.php?link=$1&id=$2
+RewriteRule ^kategori/([a-zA-Z0-9_-]+)/([0-9_-]+)$ urun_kategori.php?link=$1&id=$2
+RewriteRule ^kategori/([a-zA-Z0-9_-]+)/([0-9_-]+)/([0-9_-]+)$ urun_kategori.php?link=$1&id=$2&sayfa=$3
+RewriteRule ^haberler$ haberler.php [L]
+RewriteRule ^haberler/([a-zA-Z0-9_-]+)$ haberler.php?sayfa=$1&
+RewriteRule ^hizmetler$ hizmetler.php [L]
+
+RewriteRule ^fotogaleri$ fotogaleri.php [L]
+RewriteRule ^referanslar$ referanslar.php [L]
+RewriteRule ^fotogaleri/([a-zA-Z0-9_-]+)$ fotogaleri.php?sayfa=$1&
+RewriteRule ^fotogaleri/([a-zA-Z0-9_-]+)/([0-9_-]+)$ galeri.php?link=$1&id=$2
+RewriteRule ^urunler$ urunler.php [L]
+RewriteRule ^urunler/([a-zA-Z0-9_-]+)$ urunler.php?sayfa=$1&
+RewriteRule ^hesabim$ hesabim.php?do=hesap_"bilgileri"m [L]
+RewriteRule ^abrechnungs-informationen$ hesabim.php?do=fatura_bilgilerim [L]
+RewriteRule ^mein-konto$ hesabim.php?do=hesap_bilgilerim [L]
+RewriteRule ^abone-ol$ app/req/ajax.php?do=forms&q=aboneTalep
+RewriteRule ^siparis-formu$ app/req/ajax.php?do=forms&q=siparisFormu
+RewriteRule ^meinebuchung$ hesabim.php?do=meinebuchung [L]
+RewriteRule ^talep-formu$ app/req/ajax.php?do=forms&q=iletisimTalep
+RewriteRule ^iletisim-formu$ app/req/ajax.php?do=forms&q=iletisim
+RewriteRule ^cikis-yap$ hesabim.php?do=cikis_yap [L]
+RewriteRule ^userLogin$ app/req/ajax.php?do=user&q=login
+RewriteRule ^userRegister$ app/req/ajax.php?do=user&q=register
+RewriteRule ^userEdit$ app/req/ajax.php?do=user&q=edit
+RewriteRule ^faturaEdit$ app/req/ajax.php?do=user&q=fatura_edit
+
+ReWriteRule ^sitemap.xml sitemap.php
+RewriteRule ^404$ 404.php [L]
+ErrorDocument 404 https://www.sungate24.com/404
+

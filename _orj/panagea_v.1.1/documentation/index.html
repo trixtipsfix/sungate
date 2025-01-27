@@ -1,0 +1,318 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title></title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+		pre,code { font-family:"Consolas", Courier New, Courier, monospace; padding:15px; background:#f7f7f7; margin:0px 0px 18px; border:1px solid #e5e5e5; line-height:18px; color:#000 }
+code { padding:0px 3px; background-image:none; background:#f5f5f5; border:none }
+pre { white-space:pre-wrap; white-space:-moz-pre-wrap; white-space:-pre-wrap; white-space:-o-pre-wrap; word-wrap:break-word }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	  <h3 class="center alt"> Documentation by &ldquo;Ansonika&rdquo; v1.1</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;PANAGEA - HTML Site template&rdquo;</h1>
+		
+		<div class="borderTop">
+		  <div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 18 MAY 2018<br>
+                    Lat udpate: 8 June 2018<br>
+					By: Ansonika</strong>
+			  </p>
+		  </div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my theme. If you have any questions, please post a comment on item page. If you are happy with the theme, please <strong>TAKE A MOMENT TO RATE IT</strong> from your DOWNLOADS PAGE.
+Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#htmlStructure">HTML Structure</a></li>
+			<li><a href="#cssFiles">CSS Files, Structure and basic modifications</a></li>
+<li><a href="#php">PHP contact form, newsltetter form and plan a visit form</a></li>
+			<li><a href="#javascript">JavaScript</a></li>
+			<li><a href="#credits">Sources and Credit</a></li>
+             <li><a href="#updates">UPDATES</a></li>
+		</ol>
+   
+
+      <hr>
+        
+  <h3 id="htmlStructure"><strong>A) HTML Structure</strong> - <a href="#toc">top</a></h3>
+	  <p> This theme has a fixed centered layout 1170px. It's based on Boostrap 4 framework grid. It's ULTRA RESPONSIVE!!. 
+	  The item comes with SASS files for the primary styles.</p>
+<hr>
+
+		<h3 id="cssFiles"><strong>B) CSS Files Structure and basic modfication</strong> - <a href="#toc">top</a>	  </h3>
+	  <p>The css files are inside the css folder (not minified and minified versions included) .To modify colors, typografy, button style ecc....find the realtive comment line in style.css. 
+      <strong>We reccomend to apply every changes in css/custom.css in order to makes future updates easly to apply.</strong>
+      Below how the file is organized:</p>
+<p>1. SITE STRUCTURE and TYPOGRAPHY<br>
+  - 1.1 Typography<br>
+  - 1.2 Buttons<br>
+  - 1.3 Structure</p>
+<p>2. CONTENT<br>
+  - 2.1 Home<br>
+  - 2.2 About<br>
+  - 2.3 Listing<br>
+  - 2.4 Detail page<br>
+  - 2.5 Login/register<br>
+  - 2.6 Map styles<br>
+  - 2.7 Contacts<br>
+  - 2.8 404 page <br>
+  - 2.9 Cart section<br>
+  - 2.10 Media Gallery<br>
+  - 2.11 Faq</p>
+<p>3. COMMON<br>
+  - 3.1 Misc<br>
+  - 3.2 Accordion<br>
+  - 3.3 List<br>
+  - 3.4 Spacing<br>
+  - 3.5 Block reveal<br>
+  - 3.6 Cookie bar<br>
+  - 3.7 Sing In Modal<br>
+  - 3.8 Input Switcher<br>
+  - 3.9 Datepicker<br>
+  - 3.10 Styles Switcher</p>
+<pre>
+<p><strong>Note<br></strong>Some pages required additional specific css in the header, for example in the blog page.<br>&lt;!-- SPECIFIC CSS --&gt;<br>&lt;link href=&quot;css/blog.css&quot; rel=&quot;stylesheet&quot;&gt;</p><p>The item comes with SASS  files.</p></pre>
+<p><strong>Change the logo<br>
+</strong>To change the logo, simply use your PNG24 file (suggested logo height is 36/40px). Below how is coded</p>
+<pre>&lt;div id=&quot;logo&quot;&gt;<br>	&lt;img src=&quot;img/logo.png&quot; width=&quot;170&quot; height=&quot;36&quot; data-retina=&quot;true&quot; alt=&quot;&quot; class=&quot;logo_normal&quot;&gt;<br>	&lt;img src=&quot;img/logo_sticky.png&quot; width=&quot;170&quot; height=&quot;36&quot; data-retina=&quot;true&quot; alt=&quot;&quot; class=&quot;logo_sticky&quot;&gt;<br>&lt;/div&gt;
+
+REMEMBER to create the retina version that have double size of the orginal dimension and name it with _2x</pre>
+
+
+
+     <p><strong>Change the address of Google map in contact page</strong>: open mapmarker_func.js and change with your latitude and longitude + your full address. You can change also your map marker (that has to be png24); you can use also the psd provided in the psd folder.</p>
+ <pre>//set up markers <br>		var myMarkers = {&quot;markers&quot;: [<br>				{&quot;latitude&quot;: &quot;51.511732&quot;, &quot;longitude&quot;:&quot;-0.123270&quot;, &quot;icon&quot;: &quot;img/map-marker.png&quot;}<br>			]<br>		};<br>		<br>		//set up map options<br>		$(&quot;#map&quot;).mapmarker({<br>			zoom	: 14,<br>			center	: 'Covent Garden London', //YOUR FULL ADDRESS <br>			markers	: myMarkers<br>		});</pre>
+
+<strong>COMMON ISSUE ON GOOGLE MAP</strong> (if the Google map works locally but does not works once the site will be online)<br>
+  <pre>In some cases Google require an api key for the Google map.
+<br>You can create your own "Standard api key" here <br>by clicking on &quot;GET KEY&quot; BUTTON (on Authentication for the standard API—API keys section), <br>and follow the steps.
+<a href="https://developers.google.com/maps/documentation/javascript/get-api-key#key" target="_blank">https://developers.google.com/maps/documentation/javascript/get-api-key#key</a>
+
+Here some additionale info on how to create an API KEY <a href="http://thegrue.org/google-map-javascript-api-key/">http://thegrue.org/google-map-javascript-api-key/</a><br><br>Then replace at the bottom of every page that use Google map, this line<br>
+&lt;script src=&quot;http://maps.googleapis.com/maps/api/js&quot;&gt;&lt;/script&gt; OR 
+&lt;script type="text/javascript" src="<a target="_blank" href="http://maps.googleapis.com/maps/api/js?sensor=false">http://maps.googleapis.com/maps/api/js?sensor=false</a>"&gt;&lt;/script&gt;<br><br>with your api key included, like the example below<br>&lt;script src="<a target="_blank" href="http://maps.googleapis.com/maps/api/js?key=AIzaSyAaO0WhIut5GCNr9y8xTA36EPj87NEHptM">http://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY</a>"&gt;&lt;/script&gt;<br><br>
+NOTE: if you apply an api key, the map locally does not load. You must upload your site.</pre>
+  
+<p><strong>Home with video header (fallback with a background image in tablets and mobile)</strong><br>
+ </p>
+<pre>1)Save you mp4 and ogv video in the video folder.The name of the files must match the datasource tag:<br>
+Example<br>data-teaser-source=&quot;video/intro&quot; (folder/name_files)=<br>intro.mp4<br>intro.ogv
+
+You can change also the opacity in style.css <br><br>video {<br>	position: absolute;<br>	top: 0;<br>	bottom: 0;<br>	left: 0;<br>	right: 0;<br>	opacity: 0.6;<br>}<br><br>2) To change the fallback background image for mobiles and tablets open css/style.css and 
+find this class (video on background is disable on tablet and mobiles due to bandwith consume limit):<br><br>@media (max-width: 1024px):<br>#hero_video{
+background: #ccc url(../img/home_section_1.jpg);
+background-size:cover;
+background-position: center bottom;}<br></pre>
+
+<br>
+<p><strong>Control the opacity of the header images</strong><br>
+<pre>You can control the opacity of the header images via css, in css/style.css change the opacity here:	
+	
+.hero_in.general .wrapper {<br>  background-color: black;<br>  background-color: rgba(0, 0, 0, 0.6);<br>}
+
+.hero_in.tours .wrapper {<br>  background-color: black;<br>  background-color: rgba(0, 0, 0, 0.6);<br>}<br>.hero_in.hotels .wrapper {<br>  background-color: black;<br>  background-color: rgba(0, 0, 0, 0.6);<br>}<br>.hero_in.restaurants .wrapper {<br>  background-color: black;<br>  background-color: rgba(0, 0, 0, 0.6);<br>}
+
+or for the home page
+.hero_single.version_2 .wrapper {<br>  background-color: black;<br>  background-color: rgba(0, 0, 0, 0.45);<br>}</pre>
+
+<p><strong>Change the primary color<br>
+</strong>The theme comes with 4  predefined colors.</p>
+<pre><strong>How to change colors</strong><br>
+1) Change this line	
+&lt;!-- ALTERNATIVE COLORS CSS --&gt;<br>&lt;link href=&quot;#&quot; id=&quot;colors&quot; rel=&quot;stylesheet&quot;&gt;
+
+into
+&lt;!-- ALTERNATIVE COLORS CSS --&gt;<br>&lt;link href=&quot;css/color-green.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+or play with SASS files variables</pre>
+
+<p><strong>Set up  site launch page located in site_launch folder</strong><br>
+  Open functions.js and find this line of code:</p>
+<pre><strong>SET THE DATE</strong><br>Open site_launch/js/functions.js and find this line.<br><br>var target = new Date(&quot;July 15 2014 13:30:00 GMT+0100&quot;); //replace with YOUR DATE
+
+<strong>SET NEWSLETTER EMAIL</strong><br>Open site_launch/assets/newsletter.php and find this commented code.<br><br>//$address = &quot;your email address&quot;;<br>$address = &quot;test@domain.com&quot;;<br></pre>
+
+<p><strong>How MAPS works</strong><br>
+  Open js/map.js and find this line of code:</p>
+<pre>Let's take as example the map used in single_tour.html page. Open js/map_tours.js.
+
+'Marker': [<br>			{<br>				type_point: 'Historic',<br>				name: 'Open Bus',<br>				location_latitude: 48.865633, <br>				location_longitude: 2.321236,<br>				map_image_url: 'img/thumb_map_single_tour.jpg',<br>				rate: 'Superb | 7.5',<br>				name_point: 'Open Bus',<br>				get_directions_start_address: '',<br>				phone: '+3934245255',<br>				url_point: 'tour-detail.html'<br>			},
+
+type_point = category tour
+location_latitude= the latitude of Arc de Triomphe<br>location_longitude= the longitude of Arc de Triomphe
+map_image_url: the thumbnail inside the infobox
+rate= rate<br>name_point= the title in info box<br>description_point= description
+get_directions_start_address= get directions start address (leave empty or specify the start address)<br>phone: phone number
+url_point= the link in the button
+
+The marker/pins are located in img/pins folder.
+
+CHANGE THE DEFAULT COLOR STYLE OF THE MAP<br>You can add you onw style for example in js/map_tours.js...look for this line (aprox line 193):
+<br>styles: []
+
+inside of the square graphs, place you styles. You can find some nice premade styles 
+here https://snazzymaps.com/.<br>
+</pre>
+
+<strong>Change wheater location</strong><br> 
+    You simply provide your US zip code, WOEID, lat/long, or any location in the script at the bottom of the page:
+      <pre>  $.simpleWeather({<br>    location: 'Marseille, France',<br>    woeid: '',<br>    unit: 'c',<br>   	
+		......
+<br>  });<br>});
+
+NOTE: for more details please refer to the full documentation (<a href="http://simpleweatherjs.com/">http://simpleweatherjs.com/</a>). 
+Some towns are not supported by the script: <br>1) try using antoher method: Go to <a href="http://woeid.rosselliot.co.nz/">http://woeid.rosselliot.co.nz/</a> and type your location or one near as much as 
+possible, copy the id that the result give. Here an example http://codepen.io/fleeting/pen/skbqf  <br>2) Look for a city/town near as much as possible.
+
+<strong>IMPORTANT: the weather icon font is not visible on your local computer. To view it upload your site to your host/server.</strong>     </pre>
+
+<p><strong>Datepicker doc and generator</strong><br> 
+      Please refer to this <a href="http://www.daterangepicker.com/">documentation</a></p>
+      
+<p><strong>THE GRID</strong><br> 
+      Please refer to this <a href="http://getbootstrap.com/">documentation Boostrap</a></p>
+    
+      <hr>
+<br>
+      <h3 id="php"><strong>C) PHP files: Contact form</strong> - <a href="#php">top</a></h3>
+      <p>All the files you need are located in assets folder. If you need to change the allert messages open assets/validate.js. Below an example taken from contact.php; all the files are well commented<strong>.<br>
+      </strong><br>
+        <img src="assets/images/contacts.jpg" alt="" width="759" height="476" style="border:1px solid #ccc;">      </p>
+      </p>
+      <p><strong>Contact form<br>
+        </strong>It's the same logic and script of check newsletter. If you doesn't recieve the email please first check:<br>
+      1) Your spam folder<br>
+      2) If you hosting requires special settings (SMTP Authentication is not supported by the script)<br>
+      3) If your email  has to be managed from the same hosting provider<br>
+      4) Set the permission of the asset folder on your host to 755 your FTP client
+      </p>
+
+
+      <hr>
+<h3 id="javascript"><strong>D) JavaScript</strong> - <a href="#toc">top</a></h3>
+		
+	  <p>This theme use these Javascript (minified versions included). i've included the common theme scripts in a single file for a fast edit and load (or if you prefer you can find the same js in separate files in js folder).</p>
+      <p><strong>common_scripts.js content:
+      </strong>      
+      <ul>
+      <li>Popper.js</li>
+      <li>Boostrap.js</li>
+      <li>Wow.js</li>
+      <li>Retina-replace.js</li>
+      <li>Owl.carousel.js</li>
+      <li>MagnificPopup.js</li>
+      <li>Theia-sticky-sidebar.js</li>
+      <li>ResizeSensor.js</li>
+      <li>Sticky-kit.js</li>
+       <li>jQuery Selectbox</li>
+       <li>iCheck </li>
+       <li>jQuery Mmenu</li>
+       <li>jQuery Show hide passoword</li>
+       <li>jQuery Nice Select </li>
+       <li>simpleWeather</li>
+       <li>Ion.RangeSlider</li>
+       <li>Check Switchery.js</li>
+       <li>jquery.instagramFeed</li>
+      </ul>
+      </p>
+<hr>
+		
+		<h3 id="credits"><strong>E) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+		
+	  <p>I've used the following images, icons or other files as listed. For the js listed below, you can find the <strong>more documentation</strong> on the relative sites.
+		
+	  <ul>
+        <li><a href="http://twitter.github.io/bootstrap/">Twitter Bootstrap</a></li>
+        <li><a href="http://fontello.com/">Fontello</a></li>
+        <li><a href="http://mynameismatthieu.com/WOW">Wow</a></li>
+        <li><a href="http://daneden.github.io/animate.css/">Animate.css</a></li>
+        <li><a href="http://github.com/leonsmith/retina-replace-js">Retina replace</a></li>
+        <li><a href="http://jquery.com/">Jquery</a></li>
+        <li><a href="http://owlgraphic.com/owlcarousel/">Owl carousel</a></li>
+        <li><a href="http://www.primebox.co.uk/projects/jquery-cookiebar/">Jquery Cookie bar</a></li>
+        <li><a href="http://www.daterangepicker.com/">Datepicker</a></li>
+        <li><a href="http://leafo.net/sticky-kit/">Sticky horizontal</a></li>
+        <li><a href="https://github.com/WeCodePixels/theia-sticky-sidebar">Theia Sticky Sidebar </a></li>
+        <li><a href="https://modernizr.com/">Modernizr</a></li>
+        <li><a href="https://jqueryvalidation.org/">Jquery validate</a></li>
+        <li><a href="http://dimsemenov.com/plugins/magnific-popup/">Magnific popup</a></li>
+        <li><a href="http://icheck.fronteed.com/">Radio/checkbox Icheck</a></li>
+        <li><a href="https://github.com/FrDH/jQuery.mmenu">MMenu mobile menu</a></li>
+        <li><a href="http://ionden.com/a/plugins/ion.rangeSlider/en.html">Ion range slider</a></li>
+        <li><a href="http://isotope.metafizzy.co">Isotope</a></li>
+        <li><a href="http://flexslider.woothemes.com/">Flexslider</a></li>
+	  </ul>
+		<p>Images are not included.</p>
+        
+        <hr>
+        <h3 id="updates"><strong>E) Updates</strong> - <a href="#toc">top</a></h3>
+        <strong>v.1.1 8 June 2018</strong>
+      <ul>
+        <li>Added admin section</li>
+        <li>Improved top header icons for a better readbility in different browsers</li>
+        </ul>
+        <pre>How to update from previous version:
+1) Copy the folder admin_section
+2) File affect: css/style.css è scss/style.scss:<br> 2.1 - Copy the following images from img folder: icon_cart.svg, icon_heart.svg
+ 2.2 - In style.css update the #top_menu styles from line 596 to 694 aprox.      </pre>
+      <hr>
+
+<h3>Maybe you are interested in</h3>
+<p><a href="https://themeforest.net/item/citytours-city-tours-tour-tickets-and-guides/10715647?ref=ansonika"><img src="assets/images/01-citytours-travel-hotel-tour-template.__large_preview.jpg" width="590" height="300"></a></p>
+<p><a href="https://themeforest.net/item/travelguide-travel-guides-places-and-directions/17323444?ref=ansonika"><img src="assets/images/01-travelguide-travel-site-template.jpg" width="590" height="300"></a></p>
+<p><a href="https://themeforest.net/item/bestours-tours-excursions-and-travel-multipurpose-template/18956733?ref=ansonika"><img src="assets/images/01-bestours-multipurpose-tours-template.jpg" width="590" height="300"></a></p>
+
+<p><a href="https://themeforest.net/item/countryholidays-country-hotel-and-bed-breakfast/11800971?ref=ansonika"><img src="assets/images/01-country-hotel-accommodation-b&b.jpg" width="590" height="300"></a></p>
+<p><a href="https://themeforest.net/item/albert-hotel-and-bedbreakfast/15870620?ref=ansonika"><img src="assets/images/01-albert-hotel-bed-and-breakfast.jpg" width="590" height="300"></a></p>
+<p><strong><br>
+    <img src="assets/images/avatar.jpg" width="80" height="80"><br>
+	  <br>
+    Once again, thank you so much for purchasing this theme. Please take a moment to rate it from your Downloads page.</strong><br> 
+		  
+<h3>Need support?</h3>
+For support contact me using the form on my profile page <span class="text_medium">with subject <strong>[ThemeForest Support]  Template name</strong></span>, or submit a comment on item page. You will receive an answer within 24-48 hours (working days)  GMT  +1.
+<ul>
+<li>I only provide support for fixing bugs or small issues on my items.</li>
+<li>I don't provide free support for additional custom modifications to the items.</li>
+<li>Please provide your site link, screenshots and other information about your issue.</li>
+<li><a href="http://themeforest.net/page/item_support_policy" rel="nofollow"><strong>Envato support terms</strong></a></li>
+</ul>
+
+<h3>Need customization or availability for freelance projects?</h3>
+Just send an email via profile page form; please don't forget to specify:
+<ul>
+<li>if you are a company, agency or private user</li>
+<li>all the information about your projects, needs, site urls, project sheet, etc..</li>
+<li>from which country you are</li>
+<li>if you have a deadline</li>
+<li>if you have basic knowledge of  HTML , CSS, JS,  PHP</li>
+</ul>
+<p class="append-bottom alt large"><strong>Ansonika</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

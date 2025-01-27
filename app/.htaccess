@@ -1,0 +1,11 @@
+
+RewriteEngine on
+
+##RewriteRule ^index/([0-9a-zA-Z-_]+)$  index.php?q=$1 [L,QSA]
+
+RewriteRule ^index$ index.php [L]
+RewriteRule ^login$ login.php [L]
+RewriteRule ^logout$ logout.php [L]
+RewriteRule ^admin-login$ req/ajax.php?do=admin&q=admin_login
+
+RewriteRule ^([a-zA-Z0-9-_/]+)$ index.php?q=$1 [QSA]
